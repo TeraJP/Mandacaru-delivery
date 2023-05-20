@@ -1,31 +1,35 @@
-$(document).ready(function() {
+document.addEventListener("DOMContentLoaded", function() {
     var cartItems = [];
   
-    $('.add-to-cart').click(function() {
-      var name = $(this).data('name');
-      var price = $(this).data('price');
+    var addToCartButtons = document.getElementsByClassName("add-to-cart");
+    for (var i = 0; i < addToCartButtons.length; i++) {
+      addToCartButtons[i].addEventListener("click", function() {
+        var name = this.getAttribute("data-name");
+        var price = parseFloat(this.getAttribute("data-price"));
   
-      var item = {
-        name: name,
-        price: price,
-        quantity: 1
-      };
+        var item = {
+          name: name,
+          price: price,
+          quantity: 1
+        };
   
-      var existingItem = cartItems.find(function(cartItem) {
-        return cartItem.name === name;
+        var existingItem = cartItems.find(function(cartItem) {
+          return cartItem.name === name;
+        });
+  
+        if (existingItem) {
+          existingItem.quantity++;
+        } else {
+          cartItems.push(item);
+        }
+  
+        updateCart();
+        showSuccessMessage('Item adicionado ao carrinho!');
       });
+    }
   
-      if (existingItem) {
-        existingItem.quantity++;
-      } else {
-        cartItems.push(item);
-      }
-  
-      updateCart();
-      showSuccessMessage('Item adicionado ao carrinho!');
-    });
-  
-    $('#checkout-btn').click(function() {
+    var checkoutButton = document.getElementById("checkout-btn");
+    checkoutButton.addEventListener("click", function() {
       var totalPrice = cartItems.reduce(function(total, cartItem) {
         return total + (cartItem.price * cartItem.quantity);
       }, 0);
@@ -38,17 +42,16 @@ $(document).ready(function() {
       });
       message += 'Total: R$ ' + totalPrice.toFixed(2);
   
-      var url = 'https://api.whatsapp.com/send?phone=SEU_NUMERO_DO_WHATSAPP&text=' + encodeURIComponent(message);
-      window.open(url, '_blank');
+      sessionStorage.setItem('checkoutMessage', message);
+      window.location.href = 'summary.html';
   
       cartItems = [];
       updateCart();
-      showSuccessMessage('Pedido enviado para o WhatsApp. Obrigado!');
     });
   
     function updateCart() {
-      var tableBody = $('#cart tbody');
-      tableBody.empty();
+      var tableBody = document.getElementById("cart").getElementsByTagName("tbody")[0];
+      tableBody.innerHTML = "";
   
       var cartTotal = 0;
   
@@ -56,38 +59,53 @@ $(document).ready(function() {
         var total = cartItem.price * cartItem.quantity;
         cartTotal += total;
   
-        var row = '<tr>';
-        row += '<td>' + cartItem.name + '</td>';
-        row += '<td>R$ ' + cartItem.price.toFixed(2) + '</td>';
-        row += '<td>' + cartItem.quantity + '</td>';
-        row += '<td>R$ ' + total.toFixed(2) + '</td>';
+        var row = "<tr>";
+        row += "<td>" + cartItem.name + "</td>";
+        row += "<td>R$ " + cartItem.price.toFixed(2) + "</td>";
+        row += "<td>" + cartItem.quantity + "</td>";
         row += '<td><button class="btn btn-danger btn-sm remove-item" data-name="' + cartItem.name + '">Remover</button></td>';
-        row += '</tr>';
+        row += "</tr>";
   
-        tableBody.append(row);
+        tableBody.innerHTML += row;
       });
   
-      $('#cart-total').text('R$ ' + cartTotal.toFixed(2));
+      document.getElementById("cart-total").textContent = "R$ " + cartTotal.toFixed(2);
   
-      $('.remove-item').click(function() {
-        var name = $(this).data('name');
-        cartItems = cartItems.filter(function(cartItem) {
-          return cartItem.name !== name;
+      var removeButtons = document.getElementsByClassName("remove-item");
+      for (var i = 0; i < removeButtons.length; i++) {
+        removeButtons[i].addEventListener("click", function() {
+          var name = this.getAttribute("data-name");
+          cartItems = cartItems.filter(function(cartItem) {
+            return cartItem.name !== name;
+          });
+  
+          updateCart();
+          showSuccessMessage("Item removido do carrinho.");
         });
-  
-        updateCart();
-        showSuccessMessage('Item removido do carrinho.');
-      });
+      }
     }
   
     function showSuccessMessage(message) {
       Swal.fire({
-        icon: 'success',
-        title: 'Sucesso!',
+        icon: "success",
+        title: "Sucesso!",
         text: message,
         showConfirmButton: false,
-        timer: 2000
+        timer: 2000,
+        toast: true,
+        position: 'top-end'
       });
     }
   });
   
+  document.addEventListener('DOMContentLoaded', function() {
+    var navbar = document.querySelector('.navbar');
+    var navbarCollapse = document.querySelector('.navbar-collapse');
+  
+    document.addEventListener('click', function(event) {
+      var target = event.target;
+      if (!navbar.contains(target)) {
+        navbarCollapse.classList.remove('show');
+      }
+    });
+  });

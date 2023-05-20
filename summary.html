@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleSummary.css">
+    <title>Mandacaru</title>
+
+</head>
+<body>
+  <div>
+    <h1>Dados para a entrega</h1>
+  </div>
+  <div id="order-form">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" required>
+
+    <label for="address">Endereço:</label>
+    <input type="text" id="address" required>
+
+    <label for="money-change">Troco para quanto:</label>
+    <input type="text" id="money-change" required>
+
+    <input type="submit" id="whatsappButton" value="Fazer Pedido" onclick="submitOrder()">
+  </div>
+
+  <div id="order-summary">
+    <h2>Pedido Confirmado</h2>
+    <p><strong>Nome:</strong> <span id="summary-name"></span></p>
+    <p><strong>Endereço:</strong> <span id="summary-address"></span></p>
+    <p><strong>Troco para quanto?</strong><span id="summary-money-change"></span></p>>
+  </div>
+
+  <script src="scriptSummary.js"></script>
+</body>
+</html>

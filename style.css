@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    background-color: #F8E4CC;
     color: #333;
   }
   
@@ -13,6 +13,7 @@ body {
   
   .navbar {
     border-bottom: 1px solid #ddd;
+    background-color: #153625;
   }
   
   #hero {
@@ -31,7 +32,7 @@ body {
   .card {
     margin-bottom: 20px;
   }
-
+  
   .card-img-top {
     height: 100px; /* Defina a altura desejada */
     object-fit: cover; /* Para ajustar a imagem dentro do container */
@@ -40,11 +41,11 @@ body {
   .card-title {
     margin-bottom: 10px;
   }
-
+  
   .card-text {
     padding-left: 1em;
   }
-
+  
   .card-text li {
     font-size: 1em; /* Tamanho da fonte base */
   }
@@ -55,8 +56,24 @@ body {
     }
   }
   
-  @media (max-width: 480px) {
-
+  @media (max-width: 576px) {
+    .card-text li {
+      font-size: 0.8em; /* Tamanho da fonte para telas menores que 576px */
+    }
+  
+    .card-img-top {
+      height: 150px; /* Defina a altura desejada para telas menores */
+    }
+  
+    .card {
+      width: 100%;
+      background-color: #DBC8B2;
+    }
+  
+    .col-lg-3 {
+      flex-basis: 50%;
+      max-width: 50%;
+    }
   }
   
   #cart {
@@ -74,30 +91,15 @@ body {
   footer {
     background-color: #343a40;
     color: #fff;
-    padding: 20px 0;
+    padding: 10px 0;
   }
   
   footer p {
     margin-bottom: 0;
   }
-  
 
-  @media (max-width: 576px) {
-  .img-card {
-    max-height: 200px;
-    object-fit: cover;
-  }
-
-  .card {
-    width: 100%;
-  }
-
-  .col-lg-3 {
-    flex-basis: 50%;
-    max-width: 50%;
-  };
-
-  .card-text li {
-    font-size: 0.8em; /* Tamanho da fonte para telas menores que 480px*/
-  }
+.fab {
+    font-size: 2em;
+    padding-right: .7em;
 }
+  
