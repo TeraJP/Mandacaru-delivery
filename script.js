@@ -1,4 +1,13 @@
+
+  function toggleCategory(categoryId) {
+    var categoryContent = document.getElementById(categoryId);
+    categoryContent.style.display = categoryContent.style.display === 'block' ? 'none' : 'block';
+  }
+
 document.addEventListener("DOMContentLoaded", function() {
+
+
+
     var cartItems = [];
   
     var addToCartButtons = document.getElementsByClassName("add-to-cart");
@@ -60,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
         cartTotal += total;
   
         var row = "<tr>";
-        row += "<td>" + cartItem.name + "</td>";
+        row += '<td class="cart-item-name">' + cartItem.name + "</td>";
         row += "<td>R$ " + cartItem.price.toFixed(2) + "</td>";
         row += "<td>" + cartItem.quantity + "</td>";
         row += '<td><button class="btn btn-danger btn-sm remove-item" data-name="' + cartItem.name + '">Remover</button></td>';

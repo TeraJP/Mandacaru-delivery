@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +9,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="container">
         <a class="navbar-brand" href="#">Mandacaru</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -40,63 +43,545 @@
     </div>
   </section>
 
-  <section id="menu">
+  <section class="menu">
     <div class="container">
-      <h2 class="text-center mb-4">Cardápio</h2>
-      <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-          <div class="card">
-            <img src="https://img.freepik.com/fotos-gratis/hamburguer-de-vista-frontal-em-um-carrinho_141793-15542.jpg" class="card-img-top img-fluid img-card" alt="Açaí 1">
-            <div class="card-body">
-              <h5 class="card-title">Mandacaru</h5>
+      <h2 class="text-center mb-1 category-title" onclick="toggleCategory('category-hamburgers')">Hamburgueres</h2>
+      <div id="category-hamburgers" class="category-content">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://img.freepik.com/fotos-gratis/hamburguer-de-vista-frontal-em-um-carrinho_141793-15542.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 1">
+              <div class="card-body">
+                <h5 class="card-title">Mandacaru</h5>
                 <ul class="card-text">
-                    <li>Blend 100g</li>
-                    <li>Queijo coalho</li>
-                    <li>Alface Americano</li>
+                  <li>Blend 100g</li>
+                  <li>Queijo coalho</li>
+                  <li>Alface Americano</li>
                 </ul>
-              <button class="btn btn-primary btn-sm add-to-cart" data-name="Mandacaru" data-price="10.00">Adicionar ao Carrinho</button>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="Mandacaru" data-price="10.00">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2016/11/25/9f3ad676-d56a-4a91-bfc0-2dad8c87d5ff.jpg"
+                class="card-img-top img-fluid img-card" alt="hamburguer 2">
+              <div class="card-body">
+                <h5 class="card-title">X-Tudo</h5>
+                <ul class="card-text">
+                  <li>Blend 200g</li>
+                  <li>Queijo prato</li>
+                  <li>Tomate</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="X-Tudo" data-price="15.00">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://img.freepik.com/fotos-gratis/hamburguer-de-vista-frontal-em-um-carrinho_141793-15542.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 3">
+              <div class="card-body">
+                <h5 class="card-title">Arretado</h5>
+                <ul class="card-text">
+                  <li>Blend 150g</li>
+                  <li>Queijo catupiry</li>
+                  <li>Alface crespa</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="hamburguertopadodemaismuitobom"
+                  data-price="12.50">Adicionar ao Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2016/11/25/9f3ad676-d56a-4a91-bfc0-2dad8c87d5ff.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 4">
+              <div class="card-body">
+                <h5 class="card-title">Bacon</h5>
+                <ul class="card-text">
+                  <li>Blend 150g</li>
+                  <li>Queijo prato</li>
+                  <li>Alface</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="Bacon" data-price="11.00">Adicionar ao
+                  Carrinho</button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-          <div class="card">
-            <img src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2016/11/25/9f3ad676-d56a-4a91-bfc0-2dad8c87d5ff.jpg" class="card-img-top img-fluid img-card" alt="hamburguer 2">
-            <div class="card-body">
-              <h5 class="card-title">X-Tudo</h5>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu">
+    <div class="container">
+      <h2 class="text-center mb-1 category-title" onclick="toggleCategory('category-cuscuz')">Cuscuz</h2>
+      <div id="category-cuscuz" class="category-content">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://img.freepik.com/fotos-gratis/hamburguer-de-vista-frontal-em-um-carrinho_141793-15542.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 1">
+              <div class="card-body">
+                <h5 class="card-title">Mandacaru</h5>
                 <ul class="card-text">
-                    <li>Blend 200g</li>
-                    <li>Queijo prato</li>
-                    <li>Tomate</li>
+                  <li>Blend 100g</li>
+                  <li>Queijo coalho</li>
+                  <li>Alface Americano</li>
                 </ul>
-              <button class="btn btn-primary btn-sm add-to-cart" data-name="X-Tudo" data-price="15.00">Adicionar ao Carrinho</button>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="Mandacaru" data-price="10.00">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2016/11/25/9f3ad676-d56a-4a91-bfc0-2dad8c87d5ff.jpg"
+                class="card-img-top img-fluid img-card" alt="hamburguer 2">
+              <div class="card-body">
+                <h5 class="card-title">X-Tudo</h5>
+                <ul class="card-text">
+                  <li>Blend 200g</li>
+                  <li>Queijo prato</li>
+                  <li>Tomate</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="X-Tudo" data-price="15.00">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://img.freepik.com/fotos-gratis/hamburguer-de-vista-frontal-em-um-carrinho_141793-15542.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 3">
+              <div class="card-body">
+                <h5 class="card-title">Arretado</h5>
+                <ul class="card-text">
+                  <li>Blend 150g</li>
+                  <li>Queijo catupiry</li>
+                  <li>Alface crespa</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="hamburguertopadodemaismuitobom"
+                  data-price="12.50">Adicionar ao Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2016/11/25/9f3ad676-d56a-4a91-bfc0-2dad8c87d5ff.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 4">
+              <div class="card-body">
+                <h5 class="card-title">Bacon</h5>
+                <ul class="card-text">
+                  <li>Blend 150g</li>
+                  <li>Queijo prato</li>
+                  <li>Alface</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="Bacon" data-price="11.00">Adicionar ao
+                  Carrinho</button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-          <div class="card">
-            <img src="https://img.freepik.com/fotos-gratis/hamburguer-de-vista-frontal-em-um-carrinho_141793-15542.jpg" class="card-img-top img-fluid img-card" alt="Açaí 3">
-            <div class="card-body">
-              <h5 class="card-title">Arretado</h5>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu">
+    <div class="container">
+      <h2 class="text-center mb-1 category-title" onclick="toggleCategory('category-macaxeira')">Macaxeira</h2>
+      <div id="category-macaxeira" class="category-content">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://img.freepik.com/fotos-gratis/hamburguer-de-vista-frontal-em-um-carrinho_141793-15542.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 1">
+              <div class="card-body">
+                <h5 class="card-title">Mandacaru</h5>
                 <ul class="card-text">
-                    <li>Blend 150g</li>
-                    <li>Queijo catupiry</li>
-                    <li>Alface crespa</li>
+                  <li>Blend 100g</li>
+                  <li>Queijo coalho</li>
+                  <li>Alface Americano</li>
                 </ul>
-              <button class="btn btn-primary btn-sm add-to-cart" data-name="Arretado" data-price="12.50">Adicionar ao Carrinho</button>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="Mandacaru" data-price="10.00">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2016/11/25/9f3ad676-d56a-4a91-bfc0-2dad8c87d5ff.jpg"
+                class="card-img-top img-fluid img-card" alt="hamburguer 2">
+              <div class="card-body">
+                <h5 class="card-title">X-Tudo</h5>
+                <ul class="card-text">
+                  <li>Blend 200g</li>
+                  <li>Queijo prato</li>
+                  <li>Tomate</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="X-Tudo" data-price="15.00">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://img.freepik.com/fotos-gratis/hamburguer-de-vista-frontal-em-um-carrinho_141793-15542.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 3">
+              <div class="card-body">
+                <h5 class="card-title">Arretado</h5>
+                <ul class="card-text">
+                  <li>Blend 150g</li>
+                  <li>Queijo catupiry</li>
+                  <li>Alface crespa</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="hamburguertopadodemaismuitobom"
+                  data-price="12.50">Adicionar ao Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2016/11/25/9f3ad676-d56a-4a91-bfc0-2dad8c87d5ff.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 4">
+              <div class="card-body">
+                <h5 class="card-title">Bacon</h5>
+                <ul class="card-text">
+                  <li>Blend 150g</li>
+                  <li>Queijo prato</li>
+                  <li>Alface</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="Bacon" data-price="11.00">Adicionar ao
+                  Carrinho</button>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-          <div class="card">
-            <img src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2016/11/25/9f3ad676-d56a-4a91-bfc0-2dad8c87d5ff.jpg" class="card-img-top img-fluid img-card" alt="Açaí 4">
-            <div class="card-body">
-              <h5 class="card-title">Bacon</h5>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu">
+    <div class="container">
+      <h2 class="text-center mb-1 category-title" onclick="toggleCategory('category-lasanha')">Lasanha</h2>
+      <div id="category-lasanha" class="category-content">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://img.freepik.com/fotos-gratis/hamburguer-de-vista-frontal-em-um-carrinho_141793-15542.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 1">
+              <div class="card-body">
+                <h5 class="card-title">Mandacaru</h5>
                 <ul class="card-text">
-                    <li>Blend 150g</li>
-                    <li>Queijo prato</li>
-                    <li>Alface</li>
+                  <li>Blend 100g</li>
+                  <li>Queijo coalho</li>
+                  <li>Alface Americano</li>
                 </ul>
-              <button class="btn btn-primary btn-sm add-to-cart" data-name="Bacon" data-price="11.00">Adicionar ao Carrinho</button>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="Mandacaru" data-price="10.00">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2016/11/25/9f3ad676-d56a-4a91-bfc0-2dad8c87d5ff.jpg"
+                class="card-img-top img-fluid img-card" alt="hamburguer 2">
+              <div class="card-body">
+                <h5 class="card-title">X-Tudo</h5>
+                <ul class="card-text">
+                  <li>Blend 200g</li>
+                  <li>Queijo prato</li>
+                  <li>Tomate</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="X-Tudo" data-price="15.00">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://img.freepik.com/fotos-gratis/hamburguer-de-vista-frontal-em-um-carrinho_141793-15542.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 3">
+              <div class="card-body">
+                <h5 class="card-title">Arretado</h5>
+                <ul class="card-text">
+                  <li>Blend 150g</li>
+                  <li>Queijo catupiry</li>
+                  <li>Alface crespa</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="hamburguertopadodemaismuitobom"
+                  data-price="12.50">Adicionar ao Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2016/11/25/9f3ad676-d56a-4a91-bfc0-2dad8c87d5ff.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 4">
+              <div class="card-body">
+                <h5 class="card-title">Bacon</h5>
+                <ul class="card-text">
+                  <li>Blend 150g</li>
+                  <li>Queijo prato</li>
+                  <li>Alface</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="Bacon" data-price="11.00">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu">
+    <div class="container">
+      <h2 class="text-center mb-1 category-title" onclick="toggleCategory('category-petiscos')">Petiscos</h2>
+      <div id="category-petiscos" class="category-content">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://img.freepik.com/fotos-gratis/hamburguer-de-vista-frontal-em-um-carrinho_141793-15542.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 1">
+              <div class="card-body">
+                <h5 class="card-title">Mandacaru</h5>
+                <ul class="card-text">
+                  <li>Blend 100g</li>
+                  <li>Queijo coalho</li>
+                  <li>Alface Americano</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="Mandacaru" data-price="10.00">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2016/11/25/9f3ad676-d56a-4a91-bfc0-2dad8c87d5ff.jpg"
+                class="card-img-top img-fluid img-card" alt="hamburguer 2">
+              <div class="card-body">
+                <h5 class="card-title">X-Tudo</h5>
+                <ul class="card-text">
+                  <li>Blend 200g</li>
+                  <li>Queijo prato</li>
+                  <li>Tomate</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="X-Tudo" data-price="15.00">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://img.freepik.com/fotos-gratis/hamburguer-de-vista-frontal-em-um-carrinho_141793-15542.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 3">
+              <div class="card-body">
+                <h5 class="card-title">Arretado</h5>
+                <ul class="card-text">
+                  <li>Blend 150g</li>
+                  <li>Queijo catupiry</li>
+                  <li>Alface crespa</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="hamburguertopadodemaismuitobom"
+                  data-price="12.50">Adicionar ao Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2016/11/25/9f3ad676-d56a-4a91-bfc0-2dad8c87d5ff.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 4">
+              <div class="card-body">
+                <h5 class="card-title">Bacon</h5>
+                <ul class="card-text">
+                  <li>Blend 150g</li>
+                  <li>Queijo prato</li>
+                  <li>Alface</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="Bacon" data-price="11.00">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu">
+    <div class="container">
+      <h2 class="text-center mb-1 category-title" onclick="toggleCategory('category-sobremesas')">Sobremesas</h2>
+      <div id="category-sobremesas" class="category-content">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://img.freepik.com/fotos-gratis/hamburguer-de-vista-frontal-em-um-carrinho_141793-15542.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 1">
+              <div class="card-body">
+                <h5 class="card-title">Mandacaru</h5>
+                <ul class="card-text">
+                  <li>Blend 100g</li>
+                  <li>Queijo coalho</li>
+                  <li>Alface Americano</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="Mandacaru" data-price="10.00">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2016/11/25/9f3ad676-d56a-4a91-bfc0-2dad8c87d5ff.jpg"
+                class="card-img-top img-fluid img-card" alt="hamburguer 2">
+              <div class="card-body">
+                <h5 class="card-title">X-Tudo</h5>
+                <ul class="card-text">
+                  <li>Blend 200g</li>
+                  <li>Queijo prato</li>
+                  <li>Tomate</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="X-Tudo" data-price="15.00">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://img.freepik.com/fotos-gratis/hamburguer-de-vista-frontal-em-um-carrinho_141793-15542.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 3">
+              <div class="card-body">
+                <h5 class="card-title">Arretado</h5>
+                <ul class="card-text">
+                  <li>Blend 150g</li>
+                  <li>Queijo catupiry</li>
+                  <li>Alface crespa</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="hamburguertopadodemaismuitobom"
+                  data-price="12.50">Adicionar ao Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2016/11/25/9f3ad676-d56a-4a91-bfc0-2dad8c87d5ff.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 4">
+              <div class="card-body">
+                <h5 class="card-title">Bacon</h5>
+                <ul class="card-text">
+                  <li>Blend 150g</li>
+                  <li>Queijo prato</li>
+                  <li>Alface</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="Bacon" data-price="11.00">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu">
+    <div class="container">
+      <h2 class="text-center mb-1 category-title" onclick="toggleCategory('category-bebidas')">Bebidas</h2>
+      <div id="category-bebidas" class="category-content">
+        <div class="row">
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://img.freepik.com/fotos-gratis/hamburguer-de-vista-frontal-em-um-carrinho_141793-15542.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 1">
+              <div class="card-body">
+                <h5 class="card-title">Mandacaru</h5>
+                <ul class="card-text">
+                  <li>Blend 100g</li>
+                  <li>Queijo coalho</li>
+                  <li>Alface Americano</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="Mandacaru" data-price="10.00">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2016/11/25/9f3ad676-d56a-4a91-bfc0-2dad8c87d5ff.jpg"
+                class="card-img-top img-fluid img-card" alt="hamburguer 2">
+              <div class="card-body">
+                <h5 class="card-title">X-Tudo</h5>
+                <ul class="card-text">
+                  <li>Blend 200g</li>
+                  <li>Queijo prato</li>
+                  <li>Tomate</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="X-Tudo" data-price="15.00">Adicionar ao
+                  Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://img.freepik.com/fotos-gratis/hamburguer-de-vista-frontal-em-um-carrinho_141793-15542.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 3">
+              <div class="card-body">
+                <h5 class="card-title">Arretado</h5>
+                <ul class="card-text">
+                  <li>Blend 150g</li>
+                  <li>Queijo catupiry</li>
+                  <li>Alface crespa</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="hamburguertopadodemaismuitobom"
+                  data-price="12.50">Adicionar ao Carrinho</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+            <div class="card">
+              <img
+                src="https://p2.trrsf.com/image/fget/cf/940/0/images.terra.com/2016/11/25/9f3ad676-d56a-4a91-bfc0-2dad8c87d5ff.jpg"
+                class="card-img-top img-fluid img-card" alt="Açaí 4">
+              <div class="card-body">
+                <h5 class="card-title">Bacon</h5>
+                <ul class="card-text">
+                  <li>Blend 150g</li>
+                  <li>Queijo prato</li>
+                  <li>Alface</li>
+                </ul>
+                <button class="btn btn-primary btn-sm add-to-cart" data-name="Bacon" data-price="11.00">Adicionar ao
+                  Carrinho</button>
+              </div>
             </div>
           </div>
         </div>
@@ -162,6 +647,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  
+
 </body>
+
 </html>
