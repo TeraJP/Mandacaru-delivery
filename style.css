@@ -16,7 +16,6 @@ header {
 }
 
 .navbar {
-  height: 80px;
   border-bottom: 1px solid #ddd;
   background-color: #2D3617;
 }
@@ -27,7 +26,7 @@ header {
 
 .navbar-logo {
   position: relative;
-  top: 20px; /* Ajuste o valor conforme necessário */
+  top: 40px; /* Ajuste o valor conforme necessário */
 }
 
 #hero {
@@ -43,7 +42,7 @@ header {
   font-family: poppins;
   font-size: 2.7em;
   color: #2D3617;
-  padding-top: 100px;
+  padding-top: 150px;
   padding-bottom: 20px;
 }
 
