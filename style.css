@@ -1,3 +1,7 @@
+* {
+  font-family: 'Poppins';
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #F8E4CC;
@@ -12,8 +16,18 @@ header {
 }
 
 .navbar {
+  height: 80px;
   border-bottom: 1px solid #ddd;
-  background-color: #153625;
+  background-color: #2D3617;
+}
+
+.navbar-nav .nav-link {
+  color: #E9C597 !important; /* Cor dos links */
+}
+
+.navbar-logo {
+  position: relative;
+  top: 20px; /* Ajuste o valor conforme necessário */
 }
 
 #hero {
@@ -25,17 +39,25 @@ header {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
+.cardapio-title {
+  font-family: poppins;
+  font-size: 2.7em;
+  color: #2D3617;
+  padding-top: 100px;
+  padding-bottom: 20px;
+}
+
 .menu {
   padding: 0px 0;
 }
 
-.category-title {
-  background-color: #eea34e;
-  border-radius: 5px;
-}
-
-.menu h2 {
+.menu h3 {
+  padding: 8px;
+  margin-top: 10px;
   cursor: pointer;
+  background-color: #2D3617;
+  color: #E9C597;
+  border-radius: 5px;
 }
 
 .category-content {
@@ -119,9 +141,9 @@ header {
 }
 
 footer {
-  background-color: #343a40;
-  color: #fff;
-  padding: 10px 0;
+  background-color: #2D3617 !important;
+  color: #F8DFB7;
+  padding: 0px 0;
 }
 
 footer p {
@@ -129,6 +151,8 @@ footer p {
 }
 
 .fab {
-  font-size: 2em;
+  margin-top: 10px;
+  font-size: 1.5em;
+  color: #F8DFB7;
   padding-right: .7em;
 }

@@ -8,16 +8,21 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="container">
-        <a class="navbar-brand" href="#">Mandacaru</a>
+        <a class="navbar-brand" href="#">
+          <img src="/imagens/icon.png" width="70" height="70" class="d-inline-block align-top navbar-logo" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon hamburguer-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
@@ -36,16 +41,20 @@
     </nav>
   </header>
 
-  <section id="hero">
+  <!-- <section id="hero">
     <div class="container text-center">
       <h1 class="display-4">Bem-vindo ao Mandacaru</h1>
       <p class="lead">Satisfaça sua vontade de comida boa com apenas alguns cliques!</p>
     </div>
-  </section>
+  </section> -->
+
+  <div>
+    <h1 class="cardapio-title text-center"><strong>Cárdapio</strong></h1>
+  </div>
 
   <section class="menu">
     <div class="container">
-      <h2 class="text-center mb-1 category-title" onclick="toggleCategory('category-hamburgers')">Hamburgueres</h2>
+      <h3 class="text-left mb-1 category-title" onclick="toggleCategory('category-hamburgers')">Hambúrgueres<i class="fa fa-chevron-down float-right" aria-hidden="true"></i></h3>
       <div id="category-hamburgers" class="category-content">
         <div class="row">
           <div class="col-lg-3 col-md-4 col-sm-6 col-12">
@@ -123,7 +132,7 @@
 
   <section class="menu">
     <div class="container">
-      <h2 class="text-center mb-1 category-title" onclick="toggleCategory('category-cuscuz')">Cuscuz</h2>
+      <h3 class="text-left mb-1" onclick="toggleCategory('category-cuscuz')">Cuscuz<i class="fa fa-chevron-down float-right" aria-hidden="true"></i></h3>
       <div id="category-cuscuz" class="category-content">
         <div class="row">
           <div class="col-lg-3 col-md-4 col-sm-6 col-12">
@@ -201,7 +210,7 @@
 
   <section class="menu">
     <div class="container">
-      <h2 class="text-center mb-1 category-title" onclick="toggleCategory('category-macaxeira')">Macaxeira</h2>
+      <h3 class="text-left mb-1" onclick="toggleCategory('category-macaxeira')">Macaxeira<i class="fa fa-chevron-down float-right" aria-hidden="true"></i></h3>
       <div id="category-macaxeira" class="category-content">
         <div class="row">
           <div class="col-lg-3 col-md-4 col-sm-6 col-12">
@@ -279,7 +288,7 @@
 
   <section class="menu">
     <div class="container">
-      <h2 class="text-center mb-1 category-title" onclick="toggleCategory('category-lasanha')">Lasanha</h2>
+      <h3 class="text-left mb-1" onclick="toggleCategory('category-lasanha')">Lasanha<i class="fa fa-chevron-down float-right" aria-hidden="true"></i></h3>
       <div id="category-lasanha" class="category-content">
         <div class="row">
           <div class="col-lg-3 col-md-4 col-sm-6 col-12">
@@ -357,7 +366,7 @@
 
   <section class="menu">
     <div class="container">
-      <h2 class="text-center mb-1 category-title" onclick="toggleCategory('category-petiscos')">Petiscos</h2>
+      <h3 class="text-left mb-1" onclick="toggleCategory('category-petiscos')">Petiscos<i class="fa fa-chevron-down float-right" aria-hidden="true"></i></h3>
       <div id="category-petiscos" class="category-content">
         <div class="row">
           <div class="col-lg-3 col-md-4 col-sm-6 col-12">
@@ -435,7 +444,7 @@
 
   <section class="menu">
     <div class="container">
-      <h2 class="text-center mb-1 category-title" onclick="toggleCategory('category-sobremesas')">Sobremesas</h2>
+      <h3 class="text-left mb-1" onclick="toggleCategory('category-sobremesas')">Sobremesas<i class="fa fa-chevron-down float-right" aria-hidden="true"></i></h3>
       <div id="category-sobremesas" class="category-content">
         <div class="row">
           <div class="col-lg-3 col-md-4 col-sm-6 col-12">
@@ -513,7 +522,7 @@
 
   <section class="menu">
     <div class="container">
-      <h2 class="text-center mb-1 category-title" onclick="toggleCategory('category-bebidas')">Bebidas</h2>
+      <h3 class="text-left mb-1" onclick="toggleCategory('category-bebidas')">Bebidas<i class="fa fa-chevron-down float-right" aria-hidden="true"></i></h3>
       <div id="category-bebidas" class="category-content">
         <div class="row">
           <div class="col-lg-3 col-md-4 col-sm-6 col-12">
@@ -617,25 +626,18 @@
     </div>
   </section>
 
-  <footer class="bg-dark text-white">
+  <footer class="">
     <div class="container py-3">
       <div class="row">
         <div class="col-lg-6">
-          <h4>Mandacaru</h4>
-          <p>Rua do Bomfim, 123 - Centro - Neópolis</p>
-          <p>Telefone: (79) 3456-7890</p>
+          <h5><strong>Mandacaru Bistrô-choperia</strong></h5>
+          <p><strong>Largo do Bomfim, 119 - Centro - Neópolis/SE</strong></p>
+          <p><strong>Telefone: (79) 99946-0162</strong></p>
         </div>
         <div class="col-lg-6">
-          <h4>Redes Sociais</h4>
           <ul class="list-inline">
             <li class="list-inline-item">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.instagram.com/mandacarubistrochoperia/" target="_blank"><i class="fab fa-instagram">Mandacarubistrochoperia</i></a>
             </li>
           </ul>
         </div>
