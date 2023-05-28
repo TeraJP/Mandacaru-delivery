@@ -1,0 +1,27 @@
+{
+  "background_color": "#ffffff",
+  "description": "App massa!",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "mandacaru",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "mandacaru",
+  "start_url": "/",
+  "theme_color": "#ffffff",
+  "categories": [],
+  "screenshots": [],
+  "icons": [
+    {
+      "src": "/images/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "shortcuts": []
+}

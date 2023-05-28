@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleSummary.css">
-    <title>Mandacaru</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styleSummary.css">
+  <title>Mandacaru</title>
 
 </head>
+
 <body>
   <div>
     <h1>Dados para a entrega</h1>
@@ -19,10 +21,24 @@
     <label for="address">Endereço:</label>
     <input type="text" id="address" required>
 
-    <label for="money-change">Troco para quanto:</label>
-    <input type="text" id="money-change" required>
+    <label for="payment-method">Forma de Pagamento:</label>
+    <select id="payment-method" onchange="togglePaymentFields()">
+      <option value="" selected></option>
+      <option value="pix">Pix</option>
+      <option value="cartao">Cartão de Crédito</option>
+      <option value="dinheiro">Dinheiro</option>
+    </select>
 
-    <input type="submit" id="whatsappButton" value="Fazer Pedido" onclick="submitOrder()">
+    <div id="money-change-container" style="display: none;">
+      <label for="money-change">Troco para quanto:</label>
+      <input type="text" id="money-change">
+    </div>
+
+    <div id="pix-fields" style="display: none;">
+      <p>Chave PIX: <span id="pix-key">(79) 9987949-42 / João Pedro, WILL Pagamentos</span></p>
+    </div>
+
+    <input type="submit" id="whatsappButton" value="Fazer Pedido">
   </div>
 
   <div id="order-summary">
@@ -34,4 +50,5 @@
 
   <script src="scriptSummary.js"></script>
 </body>
+
 </html>
