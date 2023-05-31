@@ -30,7 +30,7 @@ whatsappButton.addEventListener("click", function () {
       finalMessage += ': (79) 99879-4942 / João Pedro, Will Pagamentos'
     }
 
-    var url = 'https://api.whatsapp.com/send?phone=+55798116-9700&text=' + encodeURIComponent(finalMessage);
+    var url = 'https://wa.me/557981169700?text=' + encodeURIComponent(finalMessage);
     window.open(url, '_blank');
   } else {
     alert("Por favor, preencha todos os campos.");

@@ -5,9 +5,18 @@ function toggleCategory(categoryId) {
 
 var availability = {
   Mandacaru: true,
-  "X-Tudo": true,
+  Atrevido: true,
+  Bacon: true,
+  Calabresa: true,
+  Frango: true,
+  Charque: true,
+  Carnedosol: true,
+  Enxirido: true,
+  Abestado: true,
   Arretado: true,
-  Bacon: true
+  Lampião: true,
+  Mariabonita: true,
+  Kids: true,
 };
 
 document.addEventListener("DOMContentLoaded", function() {
